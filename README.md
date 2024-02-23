@@ -1,32 +1,39 @@
-# Ad-DL-Midterm-Project
+
+# Advanced Deep Learning Project: Optimizer Comparison and Analysis
+
+## Project Overview
+This project delves into three state-of-the-art optimizer algorithms: Adagrad, Adam, and RMSprop. By applying these optimizers to an Artificial Neural Network (ANN) model trained on the Fashion MNIST dataset, we aim to uncover the intricacies, advantages, and drawbacks of each method.
 
 ## Dataset
-
-We have the Fashion MNIST which is also a large database on clothing apparels. Our work is to use three different optimizer algorithms (excluding vanilla GD/SGD) to figure out the details, pros, and cons of each one by applying all three algorithms to the artificial neural network (ANN) model to identify clothing accessories.
+The Fashion MNIST dataset comprises 70,000 grayscale images of 10 fashion categories, split into a training set of 60,000 images and a test set of 10,000 images.
 
 ## Deep Learning Model - ANN
+Our model is designed to classify images into one of the ten categories accurately. It features a sequential architecture with densely connected layers, employing ReLU and Softmax activation functions, BatchNormalization, and Dropout for regularization.
 
-Artificial Neural network resembles the brain's neural network with densely connected neurons in between input and output layers. It has a hidden layers where the internal processing happens in ANN. The neural network's objective is to minimise the loss(actual-predicted) by using the learning method called as back propogation where the weights get re-initialized in each connecting layer for many epochs through which the loss is minimised.
+## Setup Instructions
+1. **Environment Setup:** Install Python 3.x and create a virtual environment for project dependencies.
+2. **Install Dependencies:** Run `pip install -r requirements.txt` to install necessary libraries such as TensorFlow, Keras, Numpy, and Matplotlib.
+3. **Download Dataset:** The Fashion MNIST dataset is accessible via TensorFlow/Keras. Our notebooks automatically handle its loading and preprocessing.
 
-We will build and compile an ANN model without any hyperparameter tuning for the model accuracy
+## Usage Guide
+### General Workflow
+1. **Open the Desired Notebook:** Start with the optimizer-specific notebook (`fashion_mnist_<OptimizerName>_optimizer.ipynb`) of your choice.
+2. **Follow Markdown Instructions:** Each notebook contains markdown cells providing step-by-step instructions for executing the code cells.
+3. **Run Code Cells:** Sequentially execute the code cells to train the ANN model using the selected optimizer, evaluate its performance, and visualize results.
 
-**Defining the model**
-To define the model we need the Sequential() function which helps us to build the base neural network on that we have to decide the dense layers and neurons.
+### Specific Notebook Guides
+- **Adagrad, Adam, and RMSprop Notebooks:** These notebooks detail the setup, training, and evaluation process for each optimizer. They include code for model definition, compilation, training, and performance metrics visualization.
+- **Baseline Model Notebook:** `fashion_mnist_without_optimizer.ipynb` serves as a control experiment to assess the effectiveness of optimizer algorithms.
+- **Model and Optimizer Setup:** The `fashionmnist_model_optimizer.ipynb` notebook outlines the generic model architecture and training framework, adaptable to different optimizers.
+- **Best Optimizer and Hyperparameter Tuning:** `fashion-mnist-best-optimizer-and-hyperparameter.ipynb` focuses on selecting the optimal optimizer and fine-tuning model hyperparameters for enhanced performance.
+- **Results Summary:** The `Results.ipynb` notebook compiles and compares the outcomes of different optimizer trials, guiding the final selection process.
 
-- We have used relu activation function for the hidden layers and softmax for the output layer
-- Since we didn't normalize our dataset we are using BatchNormalization() function to normalize in the neural network
-- We are also considering the drop out layer in each hidden layers to reduce the chances of overfitting
+## Files Description
+- **Notebooks:** Detailed experiments with specific optimizers, a baseline comparison, optimizer selection, and results summary.
+- **Python Scripts:** Modular code for model definition, training, and evaluation (refer to `fashionmnist_model_optimizer.py` for implementation details).
 
-**Compiling the model**
-The base model of neural network is ready. It's time to connect the brain for the neural network. In this part we tell the neural network on how to learn the model where we signify the type of loss function and which optimizer and metrics to use.
-
-**Fitting the model**
-Now, its time to train our neural network. Since we didn't use any hyperparameter training we used our own values for batch size and epochs.
-
-Our project includes one Python (.py) file containing model functions for training, testing, evaluating etc.
-
-Additionally, I provide three Jupyter Notebook (.ipynb) files to facilitate your work.
-
-- The first 3 notebook, named **fashion_mnist_optimizer*.ipynb**, is specifically set up for experimenting with different optimizers to understand their impact on model performance, each person takes one.
-
-- The last notebook, **fashion_mnist_model_test.ipynb**, focuses on the accuracy of models constructed It is important to note that the evaluation in this notebook is conducted without applying any optimizers, providing a baseline performance metric for each model configuration.
+## Acknowledgments
+This project is a collaborative effort for the Advanced Deep Learning course's midterm assessment. We thank all contributors for their dedication and insights.
+Credit: Noah Nsimbe, Ryhan Sunny, Amaka Genevieve Jane Awa, and Oluwadamilare Matthew Kolawole  
+AI and Machine Learning Graduate Program # Class: Advaned Deep Learning  
+Humber International Graduate School, Toronto
